@@ -29,6 +29,8 @@
     .fluid { width:100% !important; max-width:100% !important; }
     .btn-full { display:block !important; }
     .hide-sm { display:none !important; }
+    .desc { height:auto !important; }
+    .stack img { margin:0 auto !important; }
   }
 </style>
 </head>
@@ -56,7 +58,6 @@
     <div class="f" style="font-size:14px;line-height:20px;font-weight:700;color:#B8E07F;">Trade data, made simple</div>
     <h1 class="h1 f" style="margin:12px 0 0 0;font-size:40px;line-height:46px;font-weight:700;color:#FFFFFF;letter-spacing:-0.8px;">See who&rsquo;s buying and shipping your product.</h1>
     <p class="f" style="margin:16px 0 0 0;font-size:16px;line-height:26px;color:#B9CBDD;">Search any product by HS code and get the buyers or sellers behind it, with trade value, origin, destination and HS codes in one view.</p>
-
 
 
     <!-- Browser frame, bleeds into next section -->
@@ -171,64 +172,71 @@
     <h2 class="h2 f" style="margin:14px 0 10px 0;font-size:28px;line-height:34px;font-weight:700;color:#0F1B2D;letter-spacing:-0.4px;">Narrow it down by country</h2>
     <p class="f" style="margin:0 0 24px 0;font-size:15px;line-height:24px;color:#46536A;">Filter your results by origin or destination country. Include the markets you want, or exclude the ones you don&rsquo;t, and see how many companies trade in each.</p>
 
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-      <tr>
-        <td class="stack" width="50%" valign="top" style="padding:0 8px 0 0;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #D5E0EB;border-top:4px solid #105D92;border-radius:12px;border-collapse:separate;"><tr><td class="f" style="padding:18px 16px 16px 16px;">
-            <div style="font-size:16px;line-height:22px;font-weight:700;color:#0F1B2D;padding-bottom:6px;">Origin country</div>
-            <div style="font-size:14px;line-height:21px;color:#46536A;padding-bottom:14px;">See which countries your product ships from, ranked by count.</div>
-            <img class="fluid" src="images/Origin-country-UI.png" width="226" alt="Filter Origin Country panel with include or exclude selection, country search, and company counts per country" style="width:226px;max-width:100%;border:1px solid #D5E0EB;border-radius:8px;">
-          </td></tr></table>
-        </td>
-        <td class="stack" width="50%" valign="top" style="padding:0 0 0 8px;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #D5E0EB;border-top:4px solid #8CC540;border-radius:12px;border-collapse:separate;"><tr><td class="f" style="padding:18px 16px 16px 16px;">
-            <div style="font-size:16px;line-height:22px;font-weight:700;color:#0F1B2D;padding-bottom:6px;">Destination country</div>
-            <div style="font-size:14px;line-height:21px;color:#46536A;padding-bottom:14px;">See where it is going, and pick the markets you want to target.</div>
-            <img class="fluid" src="images/Destination-country-UI.png" width="226" alt="Filter Destination Country panel with include or exclude selection, country search, and company counts per country" style="width:226px;max-width:100%;border:1px solid #D5E0EB;border-radius:8px;">
-          </td></tr></table>
-        </td>
-      </tr>
-    </table>
+    <!-- Origin: card left, image outside on right -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td class="stack" width="50%" valign="middle" style="padding:0 10px 0 0;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #D5E0EB;border-left:4px solid #105D92;border-radius:12px;border-collapse:separate;background:#F3F7FB;"><tr><td class="f" height="115" valign="middle" style="padding:18px 18px;height:115px;">
+          <div style="font-size:18px;line-height:24px;font-weight:700;color:#0F1B2D;padding-bottom:8px;">Origin country</div>
+          <div style="font-size:14px;line-height:22px;color:#46536A;">See which countries your product ships from, ranked by count.</div>
+        </td></tr></table>
+      </td>
+      <td class="stack" width="50%" valign="middle" align="right" style="padding:0 0 0 10px;">
+        <img class="fluid" src="images/Origin-country-UI.png" width="260" height="115" alt="Filter Origin Country panel with include or exclude selection, country search, and company counts per country" style="width:260px;max-width:100%;border:1px solid #D5E0EB;border-radius:8px;">
+      </td>
+    </tr></table>
+
+    <div style="height:24px;line-height:24px;font-size:0;">&nbsp;</div>
+
+    <!-- Destination: image outside on left, card right -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td class="stack" width="50%" valign="middle" align="left" style="padding:0 10px 0 0;">
+        <img class="fluid" src="images/Destination-country-UI.png" width="260" height="115" alt="Filter Destination Country panel with include or exclude selection, country search, and company counts per country" style="width:260px;max-width:100%;border:1px solid #D5E0EB;border-radius:8px;">
+      </td>
+      <td class="stack" width="50%" valign="middle" style="padding:0 0 0 10px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #D5E0EB;border-right:4px solid #8CC540;border-radius:12px;border-collapse:separate;background:#F3F7FB;"><tr><td class="f" height="115" valign="middle" style="padding:18px 18px;height:115px;">
+          <div style="font-size:18px;line-height:24px;font-weight:700;color:#0F1B2D;padding-bottom:8px;">Destination country</div>
+          <div style="font-size:14px;line-height:22px;color:#46536A;">See where it is going, and pick the markets you want to target.</div>
+        </td></tr></table>
+      </td>
+    </tr></table>
   </td></tr>
 
   <!-- ===== Step 4: Analyze (dark band) ===== -->
-  <tr><td bgcolor="#0B2A47" class="px" style="background:#0B2A47;background-image:linear-gradient(160deg,#105D92 0%,#061628 75%);padding:48px 36px 44px 36px;">
+  <tr><td bgcolor="#F3F7FB" class="px" style="background:#F3F7FB;padding:48px 36px 44px 36px;">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-      <td align="center" valign="middle" width="34" height="34" bgcolor="#8CC540" class="f" style="background:#8CC540;border-radius:999px;width:34px;height:34px;font-size:15px;line-height:34px;font-weight:700;color:#061628;">4</td>
-      <td valign="middle" class="f" style="padding-left:10px;font-size:14px;line-height:20px;font-weight:700;color:#B8E07F;">Analyze</td>
+      <td align="center" valign="middle" width="34" height="34" bgcolor="#105D92" class="f" style="background:#105D92;border-radius:999px;width:34px;height:34px;font-size:15px;line-height:34px;font-weight:700;color:#FFFFFF;">4</td>
+      <td valign="middle" class="f" style="padding-left:10px;font-size:14px;line-height:20px;font-weight:700;color:#105D92;">Analyze</td>
     </tr></table>
-    <h2 class="h2 f" style="margin:14px 0 10px 0;font-size:28px;line-height:34px;font-weight:700;color:#FFFFFF;letter-spacing:-0.4px;">Go deeper on every buyer or seller</h2>
-    <p class="f" style="margin:0 0 24px 0;font-size:15px;line-height:24px;color:#B9CBDD;">Open any row to see a consignment item breakdown for each HS code: what is typically ordered, and at what price.</p>
-    <img class="fluid" src="images/HS%20code.png" width="528" alt="Buyer results list with a Consignment Item Breakdown panel showing estimated MOQ, typical order quantity, CV %, sample size and average price for an HS code" style="width:528px;max-width:100%;border-radius:12px;border:1px solid #2A5276;box-shadow:0 12px 32px rgba(0,0,0,0.35);margin-bottom:26px;">
+    <h2 class="h2 f" style="margin:14px 0 10px 0;font-size:28px;line-height:34px;font-weight:700;color:#0F1B2D;letter-spacing:-0.4px;">Go deeper on every buyer or seller</h2>
+    <p class="f" style="margin:0 0 24px 0;font-size:15px;line-height:24px;color:#46536A;">Open any row to see a consignment item breakdown for each HS code: what is typically ordered, and at what price.</p>
+    <img class="fluid" src="images/HS%20code.png" width="528" alt="Buyer results list with a Consignment Item Breakdown panel showing estimated MOQ, typical order quantity, CV %, sample size and average price for an HS code" style="width:528px;max-width:100%;border-radius:12px;border:1px solid #D5E0EB;box-shadow:0 8px 24px rgba(16,93,146,0.12);margin-bottom:26px;">
 
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
         <td class="stack f" width="33%" valign="top" style="padding:0 8px 0 0;">
           <div style="border-top:3px solid #8CC540;padding-top:12px;">
-            <div style="font-size:15px;font-weight:700;color:#FFFFFF;line-height:21px;">What is typically ordered</div>
-            <div style="font-size:13px;color:#B9CBDD;line-height:20px;padding-top:4px;">Estimated MOQ and typical order quantity for each HS code.</div>
+            <div style="font-size:15px;font-weight:700;color:#0F1B2D;line-height:21px;">What is typically ordered</div>
+            <div style="font-size:13px;color:#46536A;line-height:20px;padding-top:4px;">Estimated MOQ and typical order quantity for each HS code.</div>
           </div>
         </td>
         <td class="stack f" width="33%" valign="top" style="padding:0 4px 0 4px;">
           <div style="border-top:3px solid #8CC540;padding-top:12px;">
-            <div style="font-size:15px;font-weight:700;color:#FFFFFF;line-height:21px;">What it sells for</div>
-            <div style="font-size:13px;color:#B9CBDD;line-height:20px;padding-top:4px;">Average price in USD for each HS code.</div>
+            <div style="font-size:15px;font-weight:700;color:#0F1B2D;line-height:21px;">What it sells for</div>
+            <div style="font-size:13px;color:#46536A;line-height:20px;padding-top:4px;">Average price in USD for each HS code.</div>
           </div>
         </td>
         <td class="stack f" width="33%" valign="top" style="padding:0 0 0 8px;">
           <div style="border-top:3px solid #8CC540;padding-top:12px;">
-            <div style="font-size:15px;font-weight:700;color:#FFFFFF;line-height:21px;">Backed by order data</div>
-            <div style="font-size:13px;color:#B9CBDD;line-height:20px;padding-top:4px;">CV %, sample size and the total number of orders analyzed.</div>
+            <div style="font-size:15px;font-weight:700;color:#0F1B2D;line-height:21px;">Backed by order data</div>
+            <div style="font-size:13px;color:#46536A;line-height:20px;padding-top:4px;">CV %, sample size and the total number of orders analyzed.</div>
           </div>
         </td>
       </tr>
     </table>
   </td></tr>
 
-
-
   <!-- ===== Footer ===== -->
-  <tr><td class="px" style="background:#FFFFFF;padding:26px 36px 30px 36px;font-family:'Century Gothic','Avenir Next',Futura,'Segoe UI',Helvetica,sans-serif;font-size:12px;line-height:19px;color:#6B7A90;">
+  <tr><td class="px f" style="background:#FFFFFF;padding:26px 36px 30px 36px;font-size:12px;line-height:19px;color:#6B7A90;">
     <strong style="color:#0F1B2D;">Eximpedia</strong> &middot; Empowering data driven decisions<br>
    </td></tr>
 
